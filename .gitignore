@@ -3,44 +3,35 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-package-lock.json
-yarn.lock
 
 # Environment variables
 .env
 .env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.production
 
-# Runtime data
-uploads/*           # Uploaded files (except you might want to keep structure)
-!uploads/.gitkeep   # Keep empty directory structure
+# Uploads
+uploads/*
+!uploads/.gitkeep
 
-# MongoDB
-data/               # Local MongoDB data directory
-*.log               # Database logs
+# OS files
+.DS_Store
+Thumbs.db
 
-# IDE/Editor
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+# Logs
+logs/
+*.log
 
 # Testing
 coverage/
 .nyc_output/
 
-# Temporary files
-tmp/
-temp/
+# Build
+dist/
+build/
