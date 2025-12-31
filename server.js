@@ -41,6 +41,7 @@ app.use('/api/projects', require('./routes/projects'));
 app.use('/api/skills', require('./routes/skills'));
 app.use('/api/blog', require('./routes/blog'));
 app.use('/api/contact', require('./routes/contact')); // NEW ROUTE
+app.use('/api/upload', require('./routes/upload'));
 
 // Health check route
 app.get('/api/health', (req, res) => {
@@ -50,6 +51,7 @@ app.get('/api/health', (req, res) => {
     timestamp: new Date().toISOString(),
   });
 });
+
 
 // Root route
 app.get('/', (req, res) => {
