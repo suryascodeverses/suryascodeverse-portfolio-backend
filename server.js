@@ -40,6 +40,7 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/projects', require('./routes/projects'));
 app.use('/api/skills', require('./routes/skills'));
 app.use('/api/blog', require('./routes/blog'));
+app.use('/api/contact', require('./routes/contact')); // NEW ROUTE
 
 // Health check route
 app.get('/api/health', (req, res) => {
@@ -61,6 +62,7 @@ app.get('/', (req, res) => {
       projects: '/api/projects',
       skills: '/api/skills',
       blog: '/api/blog',
+      contact: '/api/contact', // NEW ENDPOINT
       health: '/api/health',
     },
   });
