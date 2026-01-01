@@ -5,7 +5,15 @@ const Project = require('../models/Project');
 // @access  Public
 exports.getProjects = async (req, res, next) => {
   try {
-    const projects = await Project.find().sort({ order: 1, createdAt: -1 });
+    const { category } = req.query;
+
+    // Build query
+    const query = category && category !== "All" ? { category } : {};
+
+    const projects = await Project.find(query).sort({
+      order: 1,
+      createdAt: -1,
+    });
 
     res.status(200).json({
       success: true,

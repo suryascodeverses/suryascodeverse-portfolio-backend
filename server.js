@@ -42,6 +42,7 @@ app.use('/api/skills', require('./routes/skills'));
 app.use('/api/blog', require('./routes/blog'));
 app.use('/api/contact', require('./routes/contact')); // NEW ROUTE
 app.use('/api/upload', require('./routes/upload'));
+app.use('/api/analytics', require('./routes/analytics'));
 
 // Health check route
 app.get('/api/health', (req, res) => {
