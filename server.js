@@ -43,6 +43,7 @@ app.use('/api/blog', require('./routes/blog'));
 app.use('/api/contact', require('./routes/contact')); // NEW ROUTE
 app.use('/api/upload', require('./routes/upload'));
 app.use('/api/analytics', require('./routes/analytics'));
+app.use("/api/comments", require("./routes/comments"));
 
 // Health check route
 app.get('/api/health', (req, res) => {
